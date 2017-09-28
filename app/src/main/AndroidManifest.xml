@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".activity.MenuActivity"></activity>
+        <activity android:name=".activity.ClienteActivity" />
+        <activity android:name=".activity.SupervisorActivity" />
+        <activity android:name=".activity.TecnicoActivity" />
     </application>
 
 </manifest>

@@ -2,50 +2,34 @@ package tecsup.ricardobq.lab06.mbrtapp.datos;
 
 public class Usuario {
 
-    String username;
-    String password;
-    String nombre;
-    String rol;
-
-
-    public Usuario(String username, String password, String nombre, String rol) {
-        this.username = username;
-        this.password = password;
-        this.nombre = nombre;
-        this.rol = rol;
-    }
+    private String username;
+    private String clave;
 
     public Usuario(){}
+
+    public Usuario(String usurname, String clave) {
+        this.username = usurname;
+        this.clave = clave;
+    }
 
     public String getUsername() {
         return username;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUsername(String usurname) {
+        this.username = usurname;
     }
 
-    public String getPassword() {
-        return password;
+    public String getClave() {
+        return clave;
     }
 
-    public void setPassword(String password) {
-        this.password = password;
+    public void setClave(String clave) {
+        this.clave = clave;
     }
 
-    public String getNombre() {
-        return nombre;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getRol() {
-        return rol;
-    }
-
-    public void setRol(String rol) {
-        this.rol = rol;
+    @Override
+    public String toString() {
+        return username +clave;
     }
 }

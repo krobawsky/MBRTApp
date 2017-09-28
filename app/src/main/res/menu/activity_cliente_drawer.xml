@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group>
+        <item
+            android:id="@+id/nav_registrar1"
+            android:title="Registrar Ticket nuevo" />
+        <item
+            android:id="@+id/nav_consultar1"
+            android:title="Consultar estado de sus Tickets" />
+
+    </group>
+
+    <item android:title="Opciones">
+        <menu>
+            <item
+                android:id="@+id/nav_perfil1"
+                android:icon="@drawable/ic_perm_identity_black_24dp"
+                android:title="Perfil" />
+
+            <item
+                android:id="@+id/nav_configuracion1"
+                android:icon="@drawable/ic_settings_black_24dp"
+                android:title="Configuración" />
+
+            <item
+                android:id="@+id/nav_cerrar1"
+                android:icon="@drawable/ic_keyboard_return_black_24dp"
+                android:title="Cerrar Sesión" />
+        </menu>
+    </item>
+
+</menu>

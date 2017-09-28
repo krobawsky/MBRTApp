@@ -7,27 +7,53 @@ import java.util.List;
 
 public class UsuarioRepository {
 
-    private static UsuarioRepository _INSTANCE = null;
+    private String validar;
+    private String user, pass;
 
-    private UsuarioRepository(){}
-
-    public static UsuarioRepository getInstance(){
-        if(_INSTANCE == null)
-            _INSTANCE = new UsuarioRepository();
-        return _INSTANCE;
+    public void setValidar(String validar) {
+        this.validar = validar;
     }
 
-    List<Usuario> usuarios = new ArrayList<Usuario>();
-
-    public void list(){
-        usuarios.add(new Usuario("usuario1","pass1","Ricardo1","Cliente"));
-        usuarios.add(new Usuario("usuario2","pass2","Ricardo2","Cliente"));
-        usuarios.add(new Usuario("usuario3","pass3","Ricardo3","Supervisor"));
-        usuarios.add(new Usuario("usuario4","pass4","Ricardo4","Técnico"));
+    public String getValidar() {
+        return validar;
     }
 
-    public List<Usuario> getUsuarios() {
-        return this.usuarios;
+    private static UsuarioRepository Usuario = null;
+
+    public static UsuarioRepository crearPersona() {
+        if (Usuario == null) { Usuario = new UsuarioRepository(); }
+        return Usuario;
+    }
+
+    public String datos(Usuario usuario){
+
+        String[] usernamesCliente = {"cliente@mbrt"};
+        String[] passwordsCliente = {"cliente"};
+        String[] usernamesSupervisor = {"supervisor@mbrt"};
+        String[] passwordsSupervisor = {"supervisor"};
+        String[] usernamesTecnico = {"tecnico@mbrt"};
+        String[] passwordsTecnico = {"tecnico"};
+
+        user = usuario.getUsername();
+        pass = usuario.getClave();
+
+        for(int i=0;i<=0;i++){
+
+            if(usernamesCliente[i].equalsIgnoreCase(user) && passwordsCliente[i].equals(pass)){
+                setValidar("1");
+                break;
+            }else if (usernamesSupervisor[i].equalsIgnoreCase(user) && passwordsSupervisor[i].equals(pass)){
+                setValidar("2");
+                break;
+            }else if (usernamesTecnico[i].equalsIgnoreCase(user) && passwordsTecnico[i].equals(pass)){
+                setValidar("3");
+                break;
+            }
+            else{
+                setValidar("no");
+            }
+        }
+        return getValidar();
     }
 
 }
