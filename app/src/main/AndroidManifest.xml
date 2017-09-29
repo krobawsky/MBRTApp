@@ -17,8 +17,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".activity.ClienteActivity" />
-        <activity android:name=".activity.SupervisorActivity" />
         <activity android:name=".activity.TecnicoActivity" />
+        <activity
+            android:name=".activity.SupervisorActivity"
+            android:label="@string/title_activity_supervisor"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>

@@ -3,11 +3,11 @@
 
     <group>
         <item
-            android:id="@+id/nav_registrar1"
-            android:title="Registrar Ticket nuevo" />
-        <item
-            android:id="@+id/nav_consultar1"
+            android:id="@+id/nav_consultar"
             android:title="Consultar estado de sus Tickets" />
+        <item
+            android:id="@+id/nav_atender"
+            android:title="Atender Tickets" />
     </group>
 
     <item android:title="Opciones">
